@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="menuNav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-----------------------------------------------------HERO--------------------------------------------------------------------->
+    <section class="Hero">
+      <div class="description">
+        <h1>Pol Miró Carreño<span class="green-span">.</span></h1>
+        <h2>A Telecommunications Engineering student.</h2>
+      </div>
+      <div id="Satellite">
+        <img id="Satellite-img" src="imagenes/satelite.png" alt="Satellite">
+      </div>
+    </section>
+    <!-----------------------------------------------------ABOUT--------------------------------------------------------------------->
+    <section class="about" id="about">
+      <h2 class="sub-title">About <span class="green-span">Me</span></h2>
+      <div class="paragrafs">
+       <p>Ever since my childhood, I've held a fascination for technology. I've always been intrigued by how things work. At the age of 13, I took my first steps into the world of Arduino, making simple <a href="projects.html" target="_blank">projects.</a> This experience served as a fantastic introduction to electronics and programming.</p>
+       <p>As I progressed through high school, I studied the tech branch, and then I chose to study <a href="https://eetac.upc.edu/ca/els-estudis/graus/grau-en-enginyeria-de-sistemes-de-telecomunicacio" target="_blank">Telecommunications Engineering.</a> Initially uncertain about my decision, I soon realized that it was my passion.</p>
+      </div>
+      <div class="info">
+        <div class="education">
+          <h3 class="sub-title-2">Education</h3>
+          <ul>
+            <li>2022-current</li>
+            <li><a href="https://eetac.upc.edu/ca/els-estudis/graus/grau-en-enginyeria-de-sistemes-de-telecomunicacio" target="_blank">Telecommunications Engineering at UPC.</a></li>
+            <li>2020-2022</li>
+            <li>Tech Baccaulerate</li>
+          </ul>
+        </div>
+        <div class="languages-container">
+          <h3 class="sub-title-2">Languages</h3>
+          <div class="languages-sub-container">
+            <div class="languages">
+              <h4>English</h4>
+              <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="British flag">
+            </div>
+            <ul>
+              <li>B2 - Certified</li>
+              <li>B1 - Certified</li>
+            </ul>
+            <div class="languages">
+              <h4>Spanish</h4>
+              <img src="https://flagicons.lipis.dev/flags/1x1/es.svg" alt="Spanish flag">
+            </div>
+            <ul>
+              <li>C2 - Native</li>
+            </ul>
+            <div class="languages">
+              <h4>Catalan</h4>
+              <img src="https://flagicons.lipis.dev/flags/4x3/es-ct.svg" alt="Catalan flag">
+            </div>
+            <ul>
+              <li>C2 - Native</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+        <!-----------------------------------------------------PROJECTS--------------------------------------------------------------------->
+    <section class="projects" id="projects">
+      <h3 class="sub-title">Some <span class="green-span">Projects</span></h3>
+      <div class="project-box">
+        <a href="">
+          <div class="project">
+            <img src="imagenes/tapehead.jpg" alt="tapehead">
+            <h3 class="sub-title-2">Magnetic reader from scratch</h3>
+        </div>
+        </a>
+        <a href="">
+          <div class="project">
+            <img src="imagenes/tiger.png" alt="Tiger H1">
+            <h3 class="sub-title-2">3D printed Arduino based Tiger H1</h3>
+          </div>
+        </a>
+        <a href="">
+          <div class="project">
+            <img src="imagenes/simulador2.png" alt="flight simulator">
+            <h3 class="sub-title-2">Elevated view Flight Simulator C#</h3>
+          </div>
+        </a>
+      </div>
+      <a href="projects.html" target="_blank" class="projects-btn">+ More Projects</a>
+    </section>
+    <!-----------------------------------------------------CONTACT--------------------------------------------------------------------->
+    <section class="contact" id="contact">
+      <h2 class="sub-title">Let's work together...</h2>
+      <div class="cv-container">
+        <a href="cv.pdf" download="cv.pdf" class="cv-btn">
+          <i class='bx bx-file-blank' ></i>
+          <h3>Download CV</h3>
+        </a>
+      </div>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/pol-mir%C3%B3-865ba7247/" target="_blank">
+          <i class='bx bxl-linkedin-square' ></i>
+        </a>
+        <a href="mailto:polmirocarreno@gmail.com" target="_blank">
+          <i class='bx bxl-gmail' ></i>
+        </a>
+        <a href="https://www.youtube.com/@pol8038" target="_blank">
+          <i class='bx bxl-youtube' ></i>
+        </a>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

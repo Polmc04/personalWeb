@@ -1,0 +1,517 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+:root {
+  /* Define global variables for colors */
+  --dark-navy: #020c1b;
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --navy-shadow: rgba(2,12,27,0.7);
+  --dark-slate: #495670;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: aliceblue;
+  --green: #64ffda;
+  --green-tint: rgba(100,255,218,0.1);
+  --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+
+  /* Define global variables for fonts */
+  --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+
+  /* Define global Transitions*/
+  --transition: all 0.35s cubic-bezier(0.645,0.045,0.355,1);
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+*{
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-decoration: none;
+  list-style-type: none; /* Remove bullet points from menu options */
+  scroll-behavior: smooth;
+  outline: none;
+  font-family: var(--font-sans), var(--font-mono), 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  margin: 0, auto;
+  background-color: var(--navy);
+}
+/*---------------------------------------------HEADER---------------------------------------------*/
+
+/* CSS code for header and menu options */
+header {
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center; /* Vertically align title and menu options */
+  justify-content:right;
+  color: var(--white); /* Set text color of header */
+  background-color: rgba(10, 25, 47, 0.85);
+  box-shadow: 0 10px 30px -10px var(--navy-shadow);
+  backdrop-filter: blur(5px);
+  padding: 2rem 6%;
+}
+#menu-icon{
+  display: none;
+  font-size: 3.6rem;
+  color: var(--green);
+}
+.menuNav ul li {
+  display: inline; /* Display menu options horizontally */
+  padding: 0 0.2rem;
+}
+.menuNav ul li a {
+  font-size: 1.7rem;
+  margin-left: 5rem;
+  display: inline-block; /* Convert menu options to block level elements */
+  position: relative;
+  color: var(--green); /* Set text color of menu options */
+  font-family: var(--font-mono);
+}
+.menuNav ul li a::after { /*Underline nav animation*/
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--green);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.menuNav ul li a:hover::after { /*Underline nav animation*/
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/*---------------------------------------------MAIN---------------------------------------------*/
+main{
+  position: relative;
+}
+section{
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 10rem 9% 2rem;
+}
+p > a,
+li > a
+{
+  display: inline-block;
+  position: relative;
+}
+p > a::after,
+li > a::after { /*Underline nav animation*/
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--green);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+p > a:hover::after,
+li > a:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+h1,
+h2,
+h3,
+h4{
+  line-height: 1.5;
+}
+p{
+  font-size: 1.8rem;
+  line-height: 1.3;
+  color: var(--slate);
+  text-align:left;
+}
+/*---------------------------------------------HOME---------------------------------------------*/
+
+.Hero{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.Hero h1{
+  color: var(--lightest-slate);
+  font-size: 8rem;
+  font-weight: bold;
+}
+.Hero h2{
+  color: var(--slate);
+  font-size: 4rem;
+}
+.Hero div{
+  flex-grow: 1;
+}
+#Satellite{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Satellite-img{
+  width: 10vw;
+  transition: .7s cubic-bezier(0.25, 0.1, 0.43, 1.38);
+}
+/*---------------------------------------------ABOUT---------------------------------------------*/
+.about{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 0 15vw;
+}
+.sub-title{
+  font-size: 4rem;
+  color: var(--lightest-slate);
+  margin-bottom: 1rem;
+}
+.sub-title-2{
+  font-size: 3rem;
+  color: var(--lightest-slate);
+}
+.paragrafs{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;  
+}
+.paragrafs a,
+.info a{
+  color: var(--green);
+}
+.info{
+  color: var(--slate);
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-around;
+}
+.education,
+.languages-container{
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+.education ul,
+.languages-sub-container{
+  margin-left:2rem;
+  margin-top: 1rem;
+}
+.education ul > *,
+.languages-sub-container > *{
+  margin-top: .5rem;
+}
+.languages-container{
+  margin-right: 10rem;
+}
+.languages img{
+  border-radius: 0.25rem;
+  width: 30px;
+}
+.languages{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+/*---------------------------------------------PROJECTS---------------------------------------------*/
+.projects{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.green-span{
+  color: var(--green);
+}
+.project-box{
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.project-box h3{
+  font-size: 2.2rem;
+  line-height: 1.3;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--lightest-navy);
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+}
+.project:hover > h3{
+  color: var(--green);
+}
+.project{
+  background-color: var(--light-navy);
+  box-shadow: 0 10px 30px -15px var(--navy-shadow);
+  height: 100%;
+  position: relative;
+  transition: var(--transition);
+}
+.project:hover{
+  transform: translate(0px, -10px);
+}
+.project img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 35vw;
+  background-color: white;
+  border-radius: 5px 5px 10px 10px;
+}
+.projects-btn{
+  color: var(--green);
+  background-color: transparent;
+  border: 1px solid var(--green);
+  border-radius: 5px;
+  padding: 1.25rem 1.75rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 50px;
+  font-family: var(--font-mono);
+  font-size: 2rem;
+}
+.projects-btn:hover{
+  outline: none;
+  box-shadow: 4px 4px 0 0 var(--green);
+  transform: translate(-5px, -5px);
+}
+/*---------------------------------------------CONTACT---------------------------------------------*/
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cv-container{
+  text-align: center;
+  line-height: 1.2;
+}
+.cv-btn{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--green);
+  background-color: transparent;
+  border: 1px solid var(--green);
+  border-radius: 5px;
+  padding: 1.25rem 1.75rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 50px;
+  font-size: 3rem;
+  gap: 1.5rem;
+}
+.cv-btn h3{
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 100;
+}
+.cv-btn:hover{
+  outline: none;
+  box-shadow: 4px 4px 0 0 var(--green);
+  transform: translate(-5px, -5px);
+}
+.contact-links{
+  display: inline-block;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  font-size: 20px;
+}
+.contact-links i{
+  padding: 20px;
+  color: var(--slate);
+  transition: var(--transition);
+}
+.contact-links i:hover{
+  transform: translate(0, -5px);
+  color: var(--green);
+}
+
+
+
+/*---------------------------------------------Responsive---------------------------------------------*/
+@media (max-width: 1500px){
+  .project-box h3{
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 1300px){
+  .Hero{
+    flex-direction: column;
+  }
+  .description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #Satellite img{
+    width: 20vw;
+  }
+  .project-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .project{
+    margin-top: 1rem;
+  }
+  .project img{
+    max-width: 40vw;
+  }
+}
+@media (max-width: 1200px){
+  html{
+    font-size: 55%;
+  }
+}
+@media (max-width: 1020px){
+  .header{
+    padding: 2rem 3%;
+  }
+  .Hero h1{
+    font-size: 6rem;
+  }
+  .Hero h2{
+    font-size: 3rem;
+  }
+  .project img{
+    max-width: 45vw;
+  }
+  .projects-btn{
+    margin-top: 20px;
+  }
+}
+@media (max-width: 850px){
+  .info{
+    flex-direction: column;
+  }
+  .education,
+  .languages-container{
+  margin-top: 3rem;
+  }
+  .languages-container{
+    margin-right: 0;
+  }
+  .project img{
+    max-width: 50vw;
+  }
+}
+@media (max-width: 768px){
+  #menu-icon{
+    display: block;
+  }
+  .menuNav{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background-color: var(--navy);
+    border-top: .1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+    background-color: rgba(10, 25, 47, 0.85);
+    box-shadow: 0 10px 30px -10px var(--navy-shadow);
+    backdrop-filter: blur(5px);
+    display: none;
+  }
+  .menuNav.active{
+    display: block;
+  }
+  .menuNav ul li{
+    display: block;
+    margin: 2.5rem 0;
+  }
+  .Hero{
+    padding: 5rem 3% 2rem;
+  }
+  .Hero h1{
+    font-size: 5rem;
+  }
+  .Hero h2{
+    font-size: 2.5rem;
+  }
+  .description{
+    justify-content: flex-end;
+  }
+  .project img{
+    max-width: 55vw;
+  }
+}
+@media (max-width: 618px){
+  .Hero{
+    padding: 3rem 3% 2rem;
+  }
+  .Hero h1{
+    font-size: 4rem;
+  }
+  .Hero h2{
+    font-size: 2rem;
+  }
+  #Satellite img{
+    width: 25vw;
+  }
+}
+@media (max-width: 500px){
+  .project img{
+    max-width: 60vw;
+  }
+}
+@media (max-width: 450px){
+  html{
+    font-size: 50%;
+  }
+  .Hero h1{
+    font-size: 3.8rem;
+  }
+  .Hero h2{
+    font-size: 1.7rem;
+  }
+  .about p{
+    margin-top: .5rem;
+  }
+  .project img{
+    max-width: 70vw;
+  }
+}
+@media (max-width: 300px){
+  .Hero h1{
+    font-size: 3.6rem;
+  }
+  .Hero h2{
+    font-size: 1.55rem;
+  }
+  #Satellite img{
+    width: 35vw;
+  }
+  .about p{
+    font-size: 1.5rem;
+  }
+}
